@@ -6,6 +6,7 @@ class SampleBlocDI extends Bloc<SampleDIEvent, int> {
   final RepositorySample _repositorySample;
 
   SampleBlocDI(this._repositorySample) : super(0) {
+    // SampleDIEvent는 RepositorySample을 사용하여 데이터를 가져온다.
     on<SampleDIEvent>((event, emit) async {
       var data = await _repositorySample.load();
       emit(data);

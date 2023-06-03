@@ -16,6 +16,8 @@ class _RepositoryProviderPageState extends State<RepositoryProviderPage> {
     return RepositoryProvider(
       create: (context) => RepositorySample(),
       child: BlocProvider(
+        // SampleBlocDI bloc을 사용하겠다.
+        // 그런데 그것에다가 RepositorySample을 사용하여 데이터 까지 사용하겠다.
         create: (context) => SampleBlocDI(context.read<RepositorySample>()),
         child: const SamplePage(),
       ),
