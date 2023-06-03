@@ -1,5 +1,6 @@
 import 'package:aim_minder_flutter/src/pages/bloc_builder_page.dart';
 import 'package:aim_minder_flutter/src/pages/bloc_provider_page.dart';
+import 'package:aim_minder_flutter/src/pages/bloc_selector_page.dart';
 import 'package:aim_minder_flutter/src/pages/multi_bloc_provider_page.dart';
 import 'package:aim_minder_flutter/src/pages/repository_provider_page.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +55,15 @@ class Home extends StatelessWidget {
                 );
               },
               child: const Text('RepositoryProvider'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const BlocSelectorPage()),
+                );
+              },
+              child: const Text('BlocSelector'),
             ),
           ],
         ),
