@@ -1,4 +1,5 @@
 import 'package:aim_minder_flutter/src/pages/bloc_builder_page.dart';
+import 'package:aim_minder_flutter/src/pages/bloc_listener_page.dart';
 import 'package:aim_minder_flutter/src/pages/bloc_provider_page.dart';
 import 'package:aim_minder_flutter/src/pages/bloc_selector_page.dart';
 import 'package:aim_minder_flutter/src/pages/multi_bloc_provider_page.dart';
@@ -64,6 +65,15 @@ class Home extends StatelessWidget {
                 );
               },
               child: const Text('BlocSelector'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const BlocListenerPage()),
+                );
+              },
+              child: const Text('BlocListener'),
             ),
           ],
         ),
