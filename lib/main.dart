@@ -1,3 +1,4 @@
+import 'package:aim_minder_flutter/src/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,25 +11,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        home: RootPage());
-  }
-}
-
-class RootPage extends StatefulWidget {
-  const RootPage({super.key});
-
-  @override
-  State<RootPage> createState() => _RootPageState();
-}
-
-class _RootPageState extends State<RootPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('123')),
-    );
+        title: 'Aim Minder',
+        theme: ThemeData(
+          scaffoldBackgroundColor: const Color(0xFF1D2025),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Color(0xFF1D2025),
+            elevation: 0,
+          ),
+        ),
+        home: Home());
   }
 }
