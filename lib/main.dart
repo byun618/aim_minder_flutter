@@ -1,4 +1,4 @@
-import 'package:aim_minder_flutter/src/home.dart';
+import 'package:aim_minder_flutter/src/pages/root_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,15 +12,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Aim Minder',
-        theme: ThemeData(
-          scaffoldBackgroundColor: const Color(0xFF1D2025),
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Color(0xFF1D2025),
-            elevation: 0,
-          ),
+      debugShowCheckedModeBanner: false,
+      title: 'Aim Minder',
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFF1D2025),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF1D2025),
+          elevation: 0,
         ),
-        home: Home());
+      ),
+      home: const RootPage(),
+    );
   }
 }
